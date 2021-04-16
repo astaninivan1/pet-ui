@@ -1,0 +1,39 @@
+.menu {
+  width: 200px;
+  height: 100%;
+  padding: 20px;
+  border-right: 1px solid lightgray;
+
+  .logo {
+    height: 100px;
+    background-color: antiquewhite;
+  }
+
+  .item {
+    &__text {
+      font-size: 16px;
+      height: 20px;
+      background-color: lightcoral;
+    }
+
+    &__icon {}
+  }
+
+  &.user {
+    &__icon {
+
+    }
+
+    &__name{
+
+    }
+
+    &__password {
+
+    }
+
+    &__button {
+
+    }
+  }
+}
