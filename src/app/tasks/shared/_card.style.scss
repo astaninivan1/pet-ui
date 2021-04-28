@@ -1,0 +1,21 @@
+$border-radius: #{10%}/#{7%} !default;
+$border-radius2: 10% !default;
+$height: auto !default;
+$background: lightcoral !default;
+
+.card {
+  background-color: $background;
+  height: $height;
+
+  &__wrapper {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: $border-radius;
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+}

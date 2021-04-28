@@ -1,10 +1,3 @@
-.card {
-  &__wrapper {
-    height: 480px;
-  }
-  background-color: #ff7a7a;
+$height: 480px;
 
-  &__title {
-    font-size: 18px;
-  }
-}
+@import '../shared/card.style';
