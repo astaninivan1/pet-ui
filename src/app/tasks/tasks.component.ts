@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {CardModel} from './shared/model/card.model';
 
 @Component({
   templateUrl: 'tasks.component.html',
@@ -6,4 +7,6 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-export class TasksComponent {}
+export class TasksComponent {
+  public selectedCard: CardModel = null;
+}

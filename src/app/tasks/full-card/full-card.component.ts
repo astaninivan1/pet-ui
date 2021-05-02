@@ -1,4 +1,5 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import {CardModel} from '../shared/model/card.model';
 
 @Component({
   selector: 'app-full-card',
@@ -6,4 +7,7 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
   styleUrls: ['full-card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FullCardComponent {}
+export class FullCardComponent {
+  @Input()
+  public card: CardModel = new CardModel();
+}
