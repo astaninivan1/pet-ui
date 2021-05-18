@@ -1,10 +1,16 @@
 <div class="flex" style="height: 100%">
- <div class="cards">
-    <app-short-card  *ngFor="let a of ['', '', '', '', '', '', '', '', '', '',]" (onSelect)="selectedCard = selectedCard ? null : $event"></app-short-card>
+  <div>
+    <div class="flex flex_align-center top-panel">
+      <app-custom-input style="width: 300px" placeholder="Поиск"></app-custom-input>
+      <button style="margin-left: auto; height: 40px" mat-flat-button>Добавить задачу</button>
+    </div>
+    <div class="cards">
+      <ng-container *ngFor="let task of tasks">
+        <app-short-card [task]="task" (onSelect)="selectedCard = selectedCard?.id === task.id ? null : task"></app-short-card>
+      </ng-container>
+    </div>
   </div>
 
-  <div>
     <app-full-card *ngIf="selectedCard" [card]="selectedCard"></app-full-card>
-  </div>
 </div>
 

@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
-import {CardModel} from '../shared/model/card.model';
+import {TaskModel} from '../shared/model/task.model';
 
 @Component({
   selector: 'app-full-card',
@@ -9,5 +9,5 @@ import {CardModel} from '../shared/model/card.model';
 })
 export class FullCardComponent {
   @Input()
-  public card: CardModel = new CardModel();
+  public card: TaskModel = new TaskModel();
 }

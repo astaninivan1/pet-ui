@@ -1,5 +1,5 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {CardModel} from '../shared/model/card.model';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {TaskModel} from '../shared/model/task.model';
 
 @Component({
   selector: 'app-short-card',
@@ -8,12 +8,13 @@ import {CardModel} from '../shared/model/card.model';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ShortCardComponent implements OnInit {
-  @Output()
-  public onSelect: EventEmitter<CardModel> = new EventEmitter<CardModel>();
+  @Input()
+  public task: TaskModel;
 
-  public model: CardModel = new CardModel();
+  @Output()
+  public onSelect: EventEmitter<void> = new EventEmitter<void>();
+
   constructor() {
-    this.model.title = '3213213';
   }
 
   ngOnInit(): void {
