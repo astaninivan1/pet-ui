@@ -1,0 +1,9 @@
+<div class="flex flex_align-center flex_wrap">
+  <label class="wrapper">
+    <input type="checkbox" [formControl]="control">
+    <span class="slider"></span>
+  </label>
+  <span class="label" (click)="control.setValue(!control.value)">{{label}}</span>
+</div>
+
+

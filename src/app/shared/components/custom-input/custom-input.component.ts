@@ -5,7 +5,7 @@ const CONTROL_ACCESSOR: Provider = {
   provide: NG_VALUE_ACCESSOR,
   multi: true,
   useExisting: forwardRef(() => CustomInputComponent)
-}
+};
 
 @Component({
   selector: 'app-custom-input',
