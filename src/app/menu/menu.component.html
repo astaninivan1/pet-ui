@@ -1,0 +1,20 @@
+<div class="flex flex_align-center header">
+  <div class="toggle-btn" [ngClass]="open ? 'toggle-btn_open' : 'toggle-btn_close' " (click)="open = !open"
+       cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+    <div class="toggle-btn__stick"></div>
+    <div class="toggle-btn__stick"></div>
+    <div class="toggle-btn__stick"></div>
+  </div>
+  <app-custom-input placeholder="Поиск"></app-custom-input>
+</div>
+
+<ng-template cdkConnectedOverlay
+             [cdkConnectedOverlayOrigin]="trigger"
+             [cdkConnectedOverlayOpen]="open"
+             [cdkConnectedOverlayHasBackdrop]="true"
+             (backdropClick)="open = !open">
+  <div *ngIf="open" class="menu" @menuToggle>
+
+  </div>
+</ng-template>
+
