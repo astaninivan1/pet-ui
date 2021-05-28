@@ -1,3 +1,20 @@
 .router-wrapper {
   position: relative;
 }
+
+.card {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 10%/6%;
+  height: 480px;
+  width: 270px;
+  margin-top: 20px;
+  background-image: url('../assets/img/candle.JPG');
+  background-size: cover;
+  &__description {
+    position: absolute;
+    bottom: 0;
+    margin: 20px;
+    color: white;
+  }
+}

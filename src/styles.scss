@@ -11,12 +11,21 @@ body {
 .flex {
   display: flex;
 
+  &_center {
+    align-items: center;
+    justify-content: center;
+  }
+
   &_column {
     flex-direction: column;
   }
 
   &_align-center {
     align-items: center;
+  }
+
+  &_space-around {
+    justify-content: space-evenly;
   }
 
   &_wrap {

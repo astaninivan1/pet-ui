@@ -54,12 +54,22 @@
 
 .menu {
   position: absolute;
-  background-color: orangered;
+  background-color: #c18771;
   width: 300px;
   height: calc(100vh - 50px);
 
   @media (max-width: 500px) {
     width: 100vw;
+  }
+
+  &__item {
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    transition: 0.15s;
+    &:hover {
+      background-color: #805947;
+    }
   }
 }
 
