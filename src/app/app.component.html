@@ -1,20 +1,25 @@
 <app-menu></app-menu>
-<video autoplay loop [muted]="true">
-  <source src="../assets/video/sunset-new.mp4" type="video/mp4" >
-</video>
 
-<div class="flex flex_wrap flex_space-around">
-  <ng-container *ngFor="let a of ['', '','','']" >
-    <div class="card">
-      <div class="card__description">
-        <div>СВЕЧА ФОРМОВАЯ</div>
-        <div>Материалы:</div>
-        <div>Воск</div>
-        <div>Фитиль</div>
-      </div>
-    </div>
-  </ng-container>
-</div>
+<app-loader *ngIf="appService.isLoading"></app-loader>
+<div style="background-color: #e04719; height: 50px"></div>
+<div style="height: 50px"></div>
+
+<!--<video autoplay loop [muted]="true">-->
+<!--  <source src="../assets/video/sunset-new.mp4" type="video/mp4" >-->
+<!--</video>-->
+
+<!--<div class="flex flex_wrap flex_space-around">-->
+<!--  <ng-container *ngFor="let a of ['', '','','']" >-->
+<!--    <div class="card">-->
+<!--      <div class="card__description">-->
+<!--        <div>СВЕЧА ФОРМОВАЯ</div>-->
+<!--        <div>Материалы:</div>-->
+<!--        <div>Воск</div>-->
+<!--        <div>Фитиль</div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </ng-container>-->
+<!--</div>-->
 
 <!--<div >-->
 <!--  <img src="assets/img/candle.JPG" style="height: 400px; width: 250px">-->
