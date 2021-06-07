@@ -1,12 +1,4 @@
-:host {
-  position: sticky; top: 0; z-index: 10;
-}
-
-.header {
-  height: 50px;
-  background-color: #d7ad98;
-  padding-left: 40px;
-  .toggle-btn {
+.toggle-btn {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -24,33 +16,32 @@
 
     &_open {
       :nth-child(1) {
-        animation: burger-to-close 0.4s forwards;
-        -webkit-animation: burger-to-close 0.4s forwards;
+        animation: burger-to-close-top-stick 0.4s forwards;
+        -webkit-animation: burger-to-close-top-stick 0.4s forwards;
       }
       :nth-child(2) {
         transition-delay: 0.2s;
         visibility: hidden;
       }
       :nth-child(3) {
-        animation: burger-to-close2 0.4s forwards;
-        -webkit-animation: burger-to-close2 0.4s forwards;
+        animation: burger-to-close-bottom-stick  0.4s forwards;
+        -webkit-animation: burger-to-close-bottom-stick  0.4s forwards;
       }
     }
 
     &_close {
       :nth-child(1) {
-        animation: burger-to-open 0.4s forwards reverse;
+        animation: burger-to-open-top-stick 0.4s forwards reverse;
       }
       :nth-child(2) {
         transition-delay: 0.2s;
         visibility: visible;
       }
       :nth-child(3) {
-        animation: burger-to-open2 0.4s forwards reverse;
+        animation: burger-to-open-bottom-stick  0.4s forwards reverse;
       }
     }
   }
-}
 
 .menu {
   position: absolute;
@@ -83,7 +74,7 @@
   }
 }
 
-@keyframes burger-to-close {
+@keyframes burger-to-close-top-stick {
   from {
     transform: translateY(0);
   }
@@ -97,7 +88,7 @@
   }
 }
 
-@keyframes burger-to-close2 {
+@keyframes burger-to-close-bottom-stick {
   from {
     transform: translateY(0);
 
@@ -111,7 +102,7 @@
   }
 }
 
-@keyframes burger-to-open {
+@keyframes burger-to-open-top-stick {
   from {
     transform: translateY(0);
   }
@@ -125,7 +116,7 @@
   }
 }
 
-@keyframes burger-to-open2 {
+@keyframes burger-to-open-bottom-stick {
   from {
     transform: translateY(0);
 

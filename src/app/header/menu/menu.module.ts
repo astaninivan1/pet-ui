@@ -1,19 +1,16 @@
-import {OverlayModule} from '@angular/cdk/overlay';
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 
+import {SidePanelModule} from '../../shared/components/side-panel/side-panel.module';
 import {MenuComponent} from './menu.component';
-import {CustomInputModule} from '../shared/components/custom-input/custom-input.module';
-
 
 @NgModule({
-  declarations: [
-    MenuComponent
-  ],
   imports: [
     CommonModule,
-    CustomInputModule,
-    OverlayModule
+    SidePanelModule
+  ],
+  declarations: [
+    MenuComponent
   ],
   exports: [
     MenuComponent

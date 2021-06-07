@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  {
+    path: 'Main',
+    loadChildren: () => import('./main/main.module').then(module => module.MainModule)
+  }
 ];
 
 @NgModule({

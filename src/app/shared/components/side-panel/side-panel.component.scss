@@ -1,0 +1,10 @@
+.side-panel {
+  position: absolute;
+  background-color: #c18771;
+  width: 300px;
+  height: calc(100vh - 50px);
+
+  @media (max-width: 500px) {
+    width: 100vw;
+  }
+}

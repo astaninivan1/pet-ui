@@ -1,5 +1,11 @@
-.router-wrapper {
-  position: relative;
+.content {
+  width: 70vw;
+  background-color: cornflowerblue;
+  margin: auto;
+
+  @media (max-width: 500px) {
+    width: 100vw;
+  }
 }
 
 .card {

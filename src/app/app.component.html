@@ -1,8 +1,12 @@
-<app-menu></app-menu>
-
 <app-loader *ngIf="appService.isLoading"></app-loader>
+<app-header></app-header>
+
 <div style="background-color: #e04719; height: 50px"></div>
 <div style="height: 50px"></div>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
 
 <!--<video autoplay loop [muted]="true">-->
 <!--  <source src="../assets/video/sunset-new.mp4" type="video/mp4" >-->
@@ -24,4 +28,3 @@
 <!--<div >-->
 <!--  <img src="assets/img/candle.JPG" style="height: 400px; width: 250px">-->
 <!--</div>-->
-<!--<app-footer></app-footer>-->
